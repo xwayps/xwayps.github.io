@@ -270,7 +270,7 @@ ol li::before {
   nav {
     font-size: 1.1rem;
   }
-  header, main, footer {
+  body {
     padding-inline: calc(var(--spacing) * 1.5);
   }
 }
