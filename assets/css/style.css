@@ -260,7 +260,7 @@ ol li::before {
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1150px) {
   .site-title {
     display: none;
   }
