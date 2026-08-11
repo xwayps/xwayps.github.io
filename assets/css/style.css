@@ -260,7 +260,7 @@ ol li::before {
 }
 
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1000px) {
   .site-title {
     display: none;
   }
@@ -270,7 +270,10 @@ ol li::before {
   nav {
     font-size: 1.1rem;
   }
+}
+
+@media only screen and (max-width: 1182px) {
   body {
-    padding-inline: calc(var(--spacing) * 1.5);
+    padding-inline: calc(var(--spacing) * 2);
   }
 }
