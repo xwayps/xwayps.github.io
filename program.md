@@ -1,6 +1,7 @@
 ---
 layout: default
 title: The Program
+permalink: /program/
 ---
 1. We want independence for all Indigenous peoples. We maintain the right of nations to self-determination. 
 2. We want sovereignty over all land currently occupied by settler societies throughout the "Americas."
