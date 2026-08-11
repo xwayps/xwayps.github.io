@@ -227,7 +227,7 @@ footer {
   padding-block: calc(var(--spacing));
   text-align: center;
   color: var(--color-muted);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   margin-top: auto;
   background-color: var(--color-bg);
 }
