@@ -272,7 +272,7 @@ ol li::before {
   }
 }
 
-@media only screen and (max-width: 1182px) {
+@media only screen and (max-width: 1214px) {
   body {
     padding-inline: calc(var(--spacing) * 2);
   }
