@@ -1,5 +1,16 @@
 <nav class="main-nav">
-    <a href="{{ '/' | relative_url }}" class="active">HOME</a>
-    <a href="{{ '/program/' | relative_url }}">PROGRAM</a>
-    <a href="{{ '/news/' | relative_url }}">NEWS</a>
+  <a href="{{ '/' | relative_url }}"
+     class="{% if page.url == '/' %}active{% endif %}">
+    HOME
+  </a>
+
+  <a href="{{ '/program/' | relative_url }}"
+     class="{% if page.url == '/program/' %}active{% endif %}">
+    PROGRAM
+  </a>
+
+  <a href="{{ '/news/' | relative_url }}"
+     class="{% if page.url == '/news/' %}active{% endif %}">
+    NEWS
+  </a>
 </nav>
