@@ -3,12 +3,23 @@ layout: wrapper
 ---
 
 <div class="content">
-            <div class="hero">
-                <div class="container">
-                    <h1>OUR PARTY</h1>
-                    {{ content }}
-                    <a href="{{ '/join' | relative_url }}" class="join-link">JOIN OUR FIGHT →</a>
-                </div>
-                <img src="{{ '/assets/img/inlo_room.jpg' | relative_url }}" class="hero-image">
+    <div class="hero">
+        <div class="container">
+
+            {% if page.image %}
+            <img
+                src="{{ page.image | relative_url }}"
+                class="hero-image"
+                alt="{{ page.image_alt }}"
+            >
+            {% endif %}
+
+            <h1>OUR PARTY</h1>
+
+            {{ content }}
+
+            <a href="{{ '/join' | relative_url }}" class="join-link">JOIN OUR FIGHT →</a>
+
+        </div>
     </div>
 </div>
