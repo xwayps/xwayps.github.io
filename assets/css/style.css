@@ -391,7 +391,7 @@ ol li::before {
     .hero-image {
         float: none;
         width: 100%;
-        height: 250px;
+        height: 200px;
         margin: 0 0 var(--spacing) 0;
         object-fit: cover;
         object-position: center;
