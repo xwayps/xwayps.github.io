@@ -248,7 +248,6 @@ header {
     display: none;
     flex-direction: column;
     background-color: var(--color-bg);
-    border: 1px solid var(--color-border);
   }
 
   .nav-alt.open {
