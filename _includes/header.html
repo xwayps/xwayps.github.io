@@ -5,36 +5,11 @@
         <a href="{{ '/' | relative_url }}" class="site-title">INDIGENOUS NATIONAL LIBERATION ORGANIZATION</a>
     </div> 
 
+    <button class="hamburger" aria-label="Open menu">
+  ☰
+</button>
+
 {% include nav.html current_url=page.url %}
-
-    <!--<nav>
-    <ul>
-        <li>
-            <a href="{{ '/' | relative_url }}"
-               class="nav-button{% if page.url == '/' %} active{% endif %}">
-                HOME
-            </a>
-        </li>
-
-        |
-
-        <li>
-            <a href="{{ '/program/' | relative_url }}"
-               class="nav-button{% if page.url contains '/program' %} active{% endif %}">
-                PROGRAM
-            </a>
-        </li>
-
-        |
-
-        <li>
-            <a href="{{ '/news/' | relative_url }}"
-               class="nav-button{% if page.url contains '/news' %} active{% endif %}">
-                NEWS
-            </a>
-        </li>
-    </ul>
-</nav>-->
 
 </header>
 
