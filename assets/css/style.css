@@ -251,10 +251,6 @@ header {
   .hero-image {
         display: none;
   }
-  
-  footer {
-    font-size: 0.5rem;
-  }
 }
 
 
@@ -344,5 +340,16 @@ ol li::before {
 @media only screen and (max-width: 1214px) {
   body {
     padding-inline: calc(var(--spacing) * 2);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+p {
+    text-align: justify;
+  }
+
+  footer {
+    font-size: 0.6rem;
+    text-align: justify;
   }
 }
