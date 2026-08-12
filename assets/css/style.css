@@ -224,7 +224,7 @@ header {
   cursor: pointer;
 }
 
-@media (max-width:700px) {
+@media (max-width:600px) {
   .hamburger {
     display: block;
   }
@@ -246,10 +246,6 @@ header {
   .main-nav a {
     width: 100%;
     box-sizing: border-box;
-  }
-
-  .hero-image {
-        display: none;
   }
 }
 
@@ -351,5 +347,10 @@ p {
   footer {
     font-size: 0.6rem;
     text-align: justify;
+  }
+
+
+  .hero-image {
+        display: none;
   }
 }
