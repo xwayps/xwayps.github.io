@@ -333,17 +333,13 @@ footer a {
   object-fit: cover;
   border: 1px solid var(--color-border)
 }
- 
-ol {
-  line-height: 1.8;
-}
 
 ol li {
   position: relative;
   display: flex;
   align-items: baseline;
   counter-increment: item;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 ol li::before {
