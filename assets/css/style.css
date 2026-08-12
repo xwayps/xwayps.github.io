@@ -251,6 +251,10 @@ header {
   .hero-image {
         display: none;
   }
+  
+  footer {
+    font-size: 0.5rem;
+  }
 }
 
 
