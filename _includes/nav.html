@@ -1,3 +1,7 @@
+<button class="hamburger" aria-label="Open menu">
+  ☰
+</button>
+
 <nav class="main-nav">
   <a href="{{ '/' | relative_url }}"
      class="{% if page.url == '/' %}active{% endif %}">
@@ -14,3 +18,12 @@
     NEWS
   </a>
 </nav>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
