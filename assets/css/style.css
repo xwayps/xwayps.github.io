@@ -382,7 +382,7 @@ ol li::before {
   }
 
   ol {
-    text-align: justify;
+    text-align: left;
   }
 
 }
