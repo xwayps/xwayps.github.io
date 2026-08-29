@@ -149,6 +149,10 @@ h1 {
   width: 48%
 }
 
+.no-hero h1 {
+  width: 100%;
+}
+
 h2 {
   font-size: 1.5rem;
 }
@@ -607,10 +611,6 @@ ol li {
     }
 
     h1 {
-      width: 100%;
-    }
-
-    .no-hero h1 {
       width: 100%;
     }
 
