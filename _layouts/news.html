@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="content">
+    <div class="hero">
+        <div class="container">
+
+            <div class="article-grid">
+  {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="article-card">
+
+      {% if post.image %}
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+      {% endif %}
+
+      <div class="article-card-content">
+
+        <h2>{{ post.title }}</h2>
+
+        <p class="article-date">
+          {{ post.date | date: "%-d %B, %Y" }}
+        </p>
+
+        <div class="article-preview">
+          {{ post.excerpt | strip_html }}
+        </div>
+
+      </div>
+
+    </a>
+  {% endfor %}
+</div>
+
+            
+        </div>
+    </div>
+</div>
