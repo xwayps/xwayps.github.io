@@ -4,7 +4,7 @@ layout: wrapper
 
 <div class="content">
             <div class="hero">
-                <div class="container">
+                <div class="container{% unless page.image %} no-hero{% endunless %}">
                     <h1>{{ page.title | upcase }}</h1>
                     {{ content }}
                 </div>
