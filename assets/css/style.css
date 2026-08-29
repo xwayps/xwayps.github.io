@@ -519,7 +519,7 @@ footer a {
 
 .hero-image {
     float: right;
-    width: 50%;
+    width: 48%;
     height: auto;
     margin: 0 0 var(--spacing) calc(var(--spacing) * 2);
     display: block;
