@@ -49,3 +49,7 @@ function changeSlide(direction) {
 }
 
 showSlide(slideIndex);
+
+setInterval(() => {
+    changeSlide(1);
+}, 5000);
