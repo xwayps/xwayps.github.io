@@ -3,22 +3,46 @@ layout: wrapper
 ---
 
 <div class="content">
-    <div class="hero">
+    <div class="carousel">
         <div class="container">
 
-            {% if page.image %}
-            <img
-                src="{{ page.image | relative_url }}"
-                class="hero-image"
-                alt="{{ page.image_alt }}"
-            >
-            {% endif %}
+            {% if page.images %}
+<div class="hero-carousel">
+
+    <div class="carousel-controls">
+
+        <button class="carousel-prev" onclick="changeSlide(-1)">
+            Back
+        </button>
+
+        <div class="carousel-dots"></div>
+
+        <button class="carousel-next" onclick="changeSlide(1)">
+            Next
+        </button>
+
+    </div>
+
+    <div class="carousel-image-container">
+
+        {% for image in page.images %}
+        <img
+            src="{{ image | relative_url }}"
+            class="carousel-image"
+            alt="{{ page.image_alt }}"
+        >
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endif %}
 
             <h1>OUR PARTY</h1>
 
             {{ content }}
 
-            <a href="{{ '/join' | relative_url }}" class="join-link">JOIN OUR FIGHT →</a>
+            <a href="https://cryptpad.fr/form/#/2/form/view/3a1ZKtvuxS3UzrXCKtUnycxr9vu818iuurrfDSboPjo/" target="_blank" class="join-link">JOIN OUR FIGHT →</a>
 
         </div>
     </div>
