@@ -568,7 +568,7 @@ ol li {
 
 @media only screen and (max-width: 700px) {
   body {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   p {
@@ -615,7 +615,7 @@ ol li {
     }
 
     .carousel-controls {
-      font-size: 16px;
+      font-size: 15px;
     }
 
 }
