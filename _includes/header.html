@@ -1,17 +1,17 @@
 <header>
-            
-    <div class="header-title">   
-        <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/wordmark.png' | relative_url }}" class="wordmark"></a>
-        <a href="{{ '/' | relative_url }}" class="site-title">INDIGENOUS NATIONAL LIBERATION ORGANIZATION</a>
-    </div> 
 
-    <button class="hamburger" aria-label="Open menu">
-  ☰
-</button>
+  <div class="header-title">
+    <a href="{{ '/' | relative_url }}" aria-label="Home"><img
+        src="{{ '/assets/img/wordmark.png' | relative_url }}"
+        alt="INLO" class="wordmark"></a>
+    <a href="{{ '/' | relative_url }}" class="site-title">INDIGENOUS NATIONAL
+      LIBERATION ORGANIZATION</a>
+  </div>
 
-{% include nav.html current_url=page.url %}
+  <button class="hamburger" aria-label="Open menu">
+    ☰
+  </button>
+
+  {% include nav.html current_url=page.url %}
 
 </header>
-
-
-        

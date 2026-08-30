@@ -7,43 +7,53 @@ layout: wrapper
         <div class="container">
 
             {% if page.images %}
-<div class="hero-carousel">
+            <div class="hero-carousel">
 
-    <div class="carousel-controls">
+                <div class="carousel-controls">
 
-        <button class="carousel-prev" onclick="changeSlide(-1)">
-            Back
-        </button>
+                    <button class="carousel-prev">
+                        Back
+                    </button>
 
-        <div class="carousel-dots"></div>
+                    <div class="carousel-dots"></div>
 
-        <button class="carousel-next" onclick="changeSlide(1)">
-            Next
-        </button>
+                    <button class="carousel-next">
+                        Next
+                    </button>
 
-    </div>
+                </div>
 
-    <div class="carousel-image-container">
+                <div class="carousel-image-container">
 
-        {% for image in page.images %}
-        <img
-            src="{{ image | relative_url }}"
-            class="carousel-image"
-            alt="{{ page.image_alt }}"
-        >
-        {% endfor %}
+                    {% for image in page.images %}
+                    <img
+                        src="{{ image | relative_url }}"
+                        class="carousel-image"
+                        alt="{{ page.image_alt }}">
+                    {% endfor %}
 
-    </div>
+                </div>
 
-</div>
-{% endif %}
+            </div>
+            {% endif %}
 
             <h1>OUR PARTY</h1>
 
             {{ content }}
 
-            <a href="https://cryptpad.fr/form/#/2/form/view/3a1ZKtvuxS3UzrXCKtUnycxr9vu818iuurrfDSboPjo/" target="_blank" class="join-link">JOIN OUR FIGHT →</a>
+            <a
+                href="https://cryptpad.fr/form/#/2/form/view/3a1ZKtvuxS3UzrXCKtUnycxr9vu818iuurrfDSboPjo/"
+                target="_blank" class="join-link">JOIN OUR FIGHT →</a>
 
         </div>
     </div>
 </div>
+
+<script nonce="{{ site.csp_nonce }}">
+function changeSlide(direction) {
+    // Implementation here
+}
+
+document.querySelector('.carousel-prev').addEventListener('click', () => changeSlide(-1));
+document.querySelector('.carousel-next').addEventListener('click', () => changeSlide(1));
+</script>

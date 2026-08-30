@@ -1,21 +1,21 @@
 <nav class="nav-alt">
   <a href="{{ '/' | relative_url }}"
-     class="{% if page.url == '/' %}active{% endif %}">
+    class="{% if page.url == '/' %}active{% endif %}">
     HOME
   </a>
 
   <a href="{{ '/program/' | relative_url }}"
-     class="{% if page.url == '/program/' %}active{% endif %}">
+    class="{% if page.url == '/program/' %}active{% endif %}">
     PROGRAM
   </a>
 
   <a href="{{ '/news/' | relative_url }}"
-     class="{% if page.url == '/news/' %}active{% endif %}">
+    class="{% if page.url == '/news/' %}active{% endif %}">
     NEWS
   </a>
 </nav>
 
-<script>
+<script nonce="{{ page.nonce }}">
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav-alt');
 
