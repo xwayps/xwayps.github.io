@@ -6,8 +6,9 @@ categories: news
 permalink: /:categories/:year/:month/:day/:title
 author: INLO Media Office
 image: /assets/img/walbran.png
-image_alt: INLO members defending Walbran Central Valley
+image_alt: "INLO members defending Walbran Central Valley"
 ---
+
 This month, INLO traveled to Walbran Valley to observe the illegal industrial logging of its old growth rainforest.
 
 For decades, logging companies have ravaged the dense old-growth ecosystem of the region, but on June 26, their operations were halted and the loggers were denied access to the Walbran Valley old-growth. The RCMP (Royal Canadian Mounted Police) were called but could not enforce against the blockade until Monday, forcing both industry and officers to stand down.
