@@ -338,11 +338,22 @@ header {
 /* FOOTER */
 footer {
   padding-block: calc(var(--spacing));
-  text-align: center;
-  color: var(--color-muted);
-  font-size: 0.85rem;
+  /*x*/text-align: center;
+  color: var(--color-text);
+  /*x*/font-size: 0.85rem;
   margin-top: auto;
   background-color: var(--color-bg);
+  /*xdisplay: grid;
+  grid-display-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-top: 1px solid var(--color-border);*/
+
+  /*display: flex;
+  justify-content: space-between;*/
+}
+
+footer div {
+  width: 33.33%;
 }
 
 footer a {
