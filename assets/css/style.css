@@ -394,8 +394,9 @@ a:hover {
 
 .article-card img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
+  object-position: 50% 100%;
   display: block;
 }
 
