@@ -450,46 +450,16 @@ a:hover {
 }*/
 
 
-.join-link,
-.social-link {
-  display: block;
-}
-
 .join-link {
+  display: block;
   margin-top: auto;
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  width:fit-content;
 }
 
 .join-link:hover {
   text-decoration: underline;
-}
-
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: auto;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.social-link {
-  display: inline-flex; 
-  align-items: center; 
-  gap: 0.5rem; 
-  line-height: 1;
-  margin-bottom: 1rem;
-  text-decoration: none;
-}
-
-.social-link:hover {
-  text-decoration: underline;
-}
-
-.social-link img {
-  width: 1rem;
-  height: 1rem;
 }
 
 .hero-carousel {
@@ -502,7 +472,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: start;
-  height: 1.25rem;
+  min-height: 1.25rem;
   margin: 0 0 0.2rem 0;
   line-height: 1;
 }

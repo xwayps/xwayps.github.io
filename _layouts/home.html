@@ -51,10 +51,10 @@ layout: wrapper
             <a
                 href="https://cryptpad.fr/form/#/2/form/view/3a1ZKtvuxS3UzrXCKtUnycxr9vu818iuurrfDSboPjo/"
                 target="_blank" class="join-link">JOIN OUR FIGHT →</a>
-<a
+            <a
                 href="https://donorbox.org/inlo-general-fund"
                 target="_blank" class="join-link">DONATE →</a>
-           
+
         </div>
     </div>
 </div>
@@ -70,19 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const next = carousel.querySelector('.carousel-next');
     const dotsContainer = carousel.querySelector('.carousel-dots');
 
-    if (slides.length === 0) return;
+    if (!slides.length || !dotsContainer || !prev || !next) return;
 
     let currentSlide = 0;
     let autoplayTimer;
 
     const autoplayDelay = 5000;
 
-    // Create navigation dots.
-    slides.forEach((image, index) => {
+    // Remove any previously generated dots.
+    dotsContainer.replaceChildren();
+
+    // Create one dot for each slide.
+    slides.forEach((slide, index) => {
         const dot = document.createElement('button');
 
+        dot.type = 'button';
         dot.classList.add('carousel-dot');
         dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        dot.textContent = '•';
 
         dot.addEventListener('click', () => {
             showSlide(index);
@@ -94,14 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dots = dotsContainer.querySelectorAll('.carousel-dot');
 
-    // Display the selected slide.
     function showSlide(index) {
         currentSlide = (index + slides.length) % slides.length;
 
         slides.forEach((slide, i) => {
-            const active = i === currentSlide;
-
-            slide.classList.toggle('active', active);
+            slide.classList.toggle('active', i === currentSlide);
         });
 
         dots.forEach((dot, i) => {
@@ -112,12 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Move forward or backward through the slides.
     function changeSlide(direction) {
         showSlide(currentSlide + direction);
     }
 
-    // Restart the autoplay countdown.
     function resetAutoplay() {
         clearInterval(autoplayTimer);
 
@@ -126,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, autoplayDelay);
     }
 
-    // Previous and next buttons.
     prev.addEventListener('click', () => {
         changeSlide(-1);
         resetAutoplay();
@@ -137,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resetAutoplay();
     });
 
-    // Initialize the carousel and start autoplay.
     showSlide(0);
     resetAutoplay();
 });
