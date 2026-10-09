@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Program
+title: Our Program
 permalink: /program/
 ---
 

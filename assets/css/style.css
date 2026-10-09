@@ -144,6 +144,7 @@ h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
   margin-bottom: calc(var(--spacing) * 0.75);
+  font-weight: normal;
 }
 
 h1 {
@@ -352,13 +353,29 @@ footer {
   justify-content: space-between;*/
 }
 
-footer div {
-  width: 33.33%;
-}
-
 footer a {
   color: var(--color-link-alt);
   text-decoration: underline;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-bottom {
+  font-size: 0.875rem;
+}
+
+.footer-bottom p {
+  margin: 0;
 }
 
 /* === ARTICLE GRID === */
@@ -432,9 +449,47 @@ a:hover {
   padding: 5px 10px;
 }*/
 
+
+.join-link,
+.social-link {
+  display: block;
+}
+
 .join-link {
   margin-top: auto;
+  margin-bottom: 1rem;
   font-size: 1.1rem;
+}
+
+.join-link:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+
+.social-link img {
+  width: 1rem;
+  height: 1rem;
 }
 
 .hero-carousel {
@@ -493,21 +548,52 @@ a:hover {
 }
 
 .carousel-image {
-  position: absolute;
-  inset: 0;
-
   width: 100%;
   height: 100%;
 
   object-fit: cover;
   object-position: center center;
 
-  opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-.carousel-image.active {
+.carousel-image-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.carousel-image-link.active {
   opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-image-link::after {
+  content: "→";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+
+  background: rgb(0 0 0 / 25%);
+  color: var(--color-text);
+  font-size: 2rem;
+
+  opacity: 0;
+  transition: opacity 0.1s ;
+  pointer-events: none;
+}
+
+.carousel-image-link:hover::after {
+  opacity: 1;
+}
+
+.carousel-image-link.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .carousel-dot {
@@ -637,8 +723,3 @@ ol li {
   }
 }
 
-.news-item1 {
-  width: 100px;
-  height: 100px;
-  background-color: var(--color-text);
-}

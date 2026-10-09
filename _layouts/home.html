@@ -3,6 +3,7 @@ layout: wrapper
 ---
 
 <div class="content">
+
     <div class="carousel">
         <div class="container">
 
@@ -26,10 +27,16 @@ layout: wrapper
                 <div class="carousel-image-container">
 
                     {% for image in page.images %}
-                    <img
-                        src="{{ image | relative_url }}"
-                        class="carousel-image"
-                        alt="{{ page.image_alt }}">
+                    <a
+                        href="{{ image.url | relative_url }}"
+                        class="carousel-image-link{% if forloop.first %} active{% endif %}">
+
+                        <img
+                            src="{{ image.src | relative_url }}"
+                            class="carousel-image"
+                            alt="{{ image.alt | escape }}">
+
+                    </a>
                     {% endfor %}
 
                 </div>
@@ -37,7 +44,7 @@ layout: wrapper
             </div>
             {% endif %}
 
-            <h1>OUR PARTY</h1>
+            <h1>OUR CAUSE</h1>
 
             {{ content }}
 
@@ -45,15 +52,91 @@ layout: wrapper
                 href="https://cryptpad.fr/form/#/2/form/view/3a1ZKtvuxS3UzrXCKtUnycxr9vu818iuurrfDSboPjo/"
                 target="_blank" class="join-link">JOIN OUR FIGHT →</a>
 
+           
         </div>
     </div>
 </div>
 
 <script nonce="{{ site.csp_nonce }}">
-function changeSlide(direction) {
-    // Implementation here
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.hero-carousel');
 
-document.querySelector('.carousel-prev').addEventListener('click', () => changeSlide(-1));
-document.querySelector('.carousel-next').addEventListener('click', () => changeSlide(1));
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll('.carousel-image-link');
+    const prev = carousel.querySelector('.carousel-prev');
+    const next = carousel.querySelector('.carousel-next');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    let autoplayTimer;
+
+    const autoplayDelay = 5000;
+
+    // Create navigation dots.
+    slides.forEach((image, index) => {
+        const dot = document.createElement('button');
+
+        dot.classList.add('carousel-dot');
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            resetAutoplay();
+        });
+
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    // Display the selected slide.
+    function showSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, i) => {
+            const active = i === currentSlide;
+
+            slide.classList.toggle('active', active);
+        });
+
+        dots.forEach((dot, i) => {
+            const active = i === currentSlide;
+
+            dot.classList.toggle('active', active);
+            dot.setAttribute('aria-current', active ? 'true' : 'false');
+        });
+    }
+
+    // Move forward or backward through the slides.
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    // Restart the autoplay countdown.
+    function resetAutoplay() {
+        clearInterval(autoplayTimer);
+
+        autoplayTimer = setInterval(() => {
+            changeSlide(1);
+        }, autoplayDelay);
+    }
+
+    // Previous and next buttons.
+    prev.addEventListener('click', () => {
+        changeSlide(-1);
+        resetAutoplay();
+    });
+
+    next.addEventListener('click', () => {
+        changeSlide(1);
+        resetAutoplay();
+    });
+
+    // Initialize the carousel and start autoplay.
+    showSlide(0);
+    resetAutoplay();
+});
 </script>
