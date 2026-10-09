@@ -7,39 +7,39 @@ layout: wrapper
     <div class="carousel">
         <div class="container">
 
-            
-            {% assign recent_posts = site.posts | where_exp: "post", "post.image" | sort: "date" | reverse %}
+            {% assign recent_posts = site.posts | where_exp: "post",
+            "post.image" | sort: "date" | reverse %}
 
-{% if recent_posts.size > 0 %}
-<div class="hero-carousel">
+            {% if recent_posts.size > 0 %}
+            <div class="hero-carousel">
 
-    <div class="carousel-controls">
-        <button class="carousel-prev">Back</button>
-        <div class="carousel-dots"></div>
-        <button class="carousel-next">Next</button>
-    </div>
+                <div class="carousel-controls">
+                    <button class="carousel-prev">Back</button>
+                    <div class="carousel-dots"></div>
+                    <button class="carousel-next">Next</button>
+                </div>
 
-    <div class="carousel-image-container">
+                <div class="carousel-image-container">
 
-        {% for post in recent_posts limit: 3 %}
-        <a
-            href="{{ post.url | relative_url }}"
-            class="carousel-image-link{% if forloop.first %} active{% endif %}"
-            aria-label="{{ post.title | escape }}">
+                    {% for post in recent_posts limit: 3 %}
+                    <a
+                        href="{{ post.url | relative_url }}"
+                        class="carousel-image-link{% if forloop.first %} active{% endif %}"
+                        aria-label="{{ post.title | escape }}">
 
-            <img
-                src="{{ post.image | relative_url }}"
-                alt="{{ post.image_alt | default: post.title | default: 'Post thumbnail' | escape }}"
-                loading="lazy"
-                class="carousel-image">
+                        <img
+                            src="{{ post.image | relative_url }}"
+                            alt="{{ post.image_alt | default: post.title | default: 'Post thumbnail' | escape }}"
+                            loading="lazy"
+                            class="carousel-image">
 
-        </a>
-        {% endfor %}
+                    </a>
+                    {% endfor %}
 
-    </div>
+                </div>
 
-</div>
-{% endif %}
+            </div>
+            {% endif %}
 
             <h1>OUR CAUSE</h1>
 
@@ -55,6 +55,7 @@ layout: wrapper
         </div>
     </div>
 </div>
+
 
 <script nonce="{{ site.csp_nonce }}">
 document.addEventListener('DOMContentLoaded', () => {
@@ -74,10 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const autoplayDelay = 5000;
 
-    // Remove any previously generated dots.
     dotsContainer.replaceChildren();
 
-    // Create one dot for each slide.
     slides.forEach((slide, index) => {
         const dot = document.createElement('button');
 
@@ -85,11 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.classList.add('carousel-dot');
         dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
         dot.textContent = '•';
-
-        dot.addEventListener('click', () => {
-            showSlide(index);
-            resetAutoplay();
-        });
 
         dotsContainer.appendChild(dot);
     });
@@ -105,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         dots.forEach((dot, i) => {
             const active = i === currentSlide;
-
             dot.classList.toggle('active', active);
             dot.setAttribute('aria-current', active ? 'true' : 'false');
         });
@@ -113,27 +106,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function changeSlide(direction) {
         showSlide(currentSlide + direction);
+        resetAutoplay();
     }
 
     function resetAutoplay() {
-        clearInterval(autoplayTimer);
+        clearTimeout(autoplayTimer);
 
-        autoplayTimer = setInterval(() => {
-            changeSlide(1);
+        autoplayTimer = setTimeout(() => {
+            showSlide(currentSlide + 1);
+            resetAutoplay();
         }, autoplayDelay);
     }
 
-    prev.addEventListener('click', () => {
-        changeSlide(-1);
-        resetAutoplay();
+    dotsContainer.addEventListener('click', (event) => {
+        const dot = event.target.closest('.carousel-dot');
+
+        if (!dot || !dotsContainer.contains(dot)) return;
+
+        const index = Array.from(dots).indexOf(dot);
+
+        if (index !== -1) {
+            showSlide(index);
+            resetAutoplay();
+        }
     });
 
-    next.addEventListener('click', () => {
-        changeSlide(1);
-        resetAutoplay();
-    });
+    prev.addEventListener('click', () => changeSlide(-1));
+    next.addEventListener('click', () => changeSlide(1));
 
     showSlide(0);
     resetAutoplay();
 });
 </script>
+
