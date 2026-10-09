@@ -6,7 +6,7 @@ categories: news
 permalink: /:categories/:year/:month/:day/:title
 author: INLO Media Office
 image: /assets/img/settler-aggression.webp
-image_alt: "Cover image"
+image_alt: "Notice: Rising Settler Aggression"
 ---
 On Sept. 28, a white nationalist organization called "Second Sons" marched near the old Kamloops Indian residential school on Secwépemc land in central British Columbia. 
 Later, after marching to a nearby McDonald's, they moved to a highway overpass where the dropped a banner saying "Got bones?"

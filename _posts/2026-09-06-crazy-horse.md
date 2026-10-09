@@ -6,7 +6,7 @@ categories: news
 permalink: /:categories/:year/:month/:day/:title
 author: INLO Media Office
 image: /assets/img/remembering-crazy-horse.webp
-image_alt: "Cover image"
+image_alt: "September 5th: Remembering Crazy Horse"
 ---
 > "My lands are where my dead lie buried." -Crazy Horse
 

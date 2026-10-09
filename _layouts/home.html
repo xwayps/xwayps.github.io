@@ -7,42 +7,39 @@ layout: wrapper
     <div class="carousel">
         <div class="container">
 
-            {% if page.images %}
-            <div class="hero-carousel">
+            
+            {% assign recent_posts = site.posts | where_exp: "post", "post.image" | sort: "date" | reverse %}
 
-                <div class="carousel-controls">
+{% if recent_posts.size > 0 %}
+<div class="hero-carousel">
 
-                    <button class="carousel-prev">
-                        Back
-                    </button>
+    <div class="carousel-controls">
+        <button class="carousel-prev">Back</button>
+        <div class="carousel-dots"></div>
+        <button class="carousel-next">Next</button>
+    </div>
 
-                    <div class="carousel-dots"></div>
+    <div class="carousel-image-container">
 
-                    <button class="carousel-next">
-                        Next
-                    </button>
+        {% for post in recent_posts limit: 3 %}
+        <a
+            href="{{ post.url | relative_url }}"
+            class="carousel-image-link{% if forloop.first %} active{% endif %}"
+            aria-label="{{ post.title | escape }}">
 
-                </div>
+            <img
+                src="{{ post.image | relative_url }}"
+                alt="{{ post.image_alt | default: post.title | default: 'Post thumbnail' | escape }}"
+                loading="lazy"
+                class="carousel-image">
 
-                <div class="carousel-image-container">
+        </a>
+        {% endfor %}
 
-                    {% for image in page.images %}
-                    <a
-                        href="{{ image.url | relative_url }}"
-                        class="carousel-image-link{% if forloop.first %} active{% endif %}">
+    </div>
 
-                        <img
-                            src="{{ image.src | relative_url }}"
-                            class="carousel-image"
-                            alt="{{ image.alt | escape }}">
-
-                    </a>
-                    {% endfor %}
-
-                </div>
-
-            </div>
-            {% endif %}
+</div>
+{% endif %}
 
             <h1>OUR CAUSE</h1>
 

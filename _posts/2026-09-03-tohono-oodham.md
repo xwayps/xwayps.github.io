@@ -6,7 +6,7 @@ categories: news
 permalink: /:categories/:year/:month/:day/:title
 author: INLO Media Office
 image: /assets/img/tohono-oodham.webp
-image_alt: "Cover image"
+image_alt: "Notice: Tohono O'odham Territory"
 ---
 Wake up Indian Country!
 
