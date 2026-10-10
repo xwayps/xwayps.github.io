@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('.hero-carousel');
 
     if (!carousel) return;
+    carousel.classList.add('js-enabled');
 
     const slides = carousel.querySelectorAll('.carousel-image-link');
     const prev = carousel.querySelector('.carousel-prev');
