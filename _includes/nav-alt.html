@@ -1,3 +1,4 @@
+<div class="nav-alt-wrapper">
 <nav class="nav-alt">
   <a href="{{ '/' | relative_url }}"
     class="{% if page.url == '/' %}active{% endif %}">
@@ -14,6 +15,7 @@
     NEWS
   </a>
 </nav>
+</div>
 
 <script nonce="{{ page.nonce }}">
   const hamburger = document.querySelector('.hamburger');

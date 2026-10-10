@@ -33,6 +33,10 @@ layout: wrapper
                             loading="lazy"
                             class="carousel-image">
 
+                        <span class="carousel-title">
+                            {{ post.title | escape }}
+                        </span>     
+
                     </a>
                     {% endfor %}
 
