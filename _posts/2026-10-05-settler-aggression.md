@@ -21,7 +21,9 @@ The "Canadian" settler state will not help us. They are our enemy. They fund the
 
 We must prepare to defend ourselves from settler aggression. This is only the beginning.
 
-"When an oppressed people show a willingness to defend themselves, the enemy, who is a moral weakling and coward, is more willing to grant concessions and work for a respectable compromise.... They are most vicious and violent when they can practice violence with impunity." --Robert F. Williams
+> *When an oppressed people show a willingness to defend themselves, the enemy, who is a moral weakling and coward, is more willing to grant concessions and work for a respectable compromise.... They are most vicious and violent when they can practice violence with impunity.*
+>
+> — Robert F. Williams
 
 But there is no hope for compromise. There is no possibility of reconciliation. Every inch of this land is ours, so we must defend it to the very end.
 

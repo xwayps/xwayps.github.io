@@ -24,5 +24,6 @@ We will never win within the colonizer's system. Their laws and "procedures" are
 
 The Indigenous masses are powerful beyond measure. We must prepare to struggle for our ancestral land. 
 
-"Colonialism is not a thinking machine, nor a body endowed with reasoning faculties. It is violence in its natural state, and it will only yield when confronted with greater violence."
--Frantz Fanon
+> *Colonialism is not a thinking machine, nor a body endowed with reasoning faculties. It is violence in its natural state, and it will only yield when confronted with greater violence.*
+>
+> —Frantz Fanon

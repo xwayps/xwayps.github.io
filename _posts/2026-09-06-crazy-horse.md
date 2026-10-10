@@ -8,7 +8,9 @@ author: INLO Media Office
 image: /assets/img/remembering-crazy-horse.webp
 image_alt: "September 5th: Remembering Crazy Horse"
 ---
-> "My lands are where my dead lie buried." -Crazy Horse
+> *My lands are where my dead lie buried.*
+> 
+> — Crazy Horse
 
 On the evening of this day, September 5th, 1877, Chief Tȟašúŋke Witkó (Crzy Horse) would pass away at Fort Robinson in Nebraska from a fatal bayonet wound inflicted by a US Soldier.
 
