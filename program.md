@@ -4,19 +4,16 @@ title: Our Program
 permalink: /program/
 ---
 
-1. We want independence for all Indigenous peoples. We maintain the right of nations to self-determination.
-2. We want sovereignty over all land currently occupied by settler societies throughout the "Americas."
-3. We want education for, and by, all Native, Inuit, and Métis peoples.
-4. We want an end to the capitalist exploitation of our ancestral lands by settlers and imperialists.
-5. We want indigenous communities to be armed.
-6. We want to preserve and revitalize Indigenous languages.
-7. We want Indigenous cultures to be maintained. We reject assimilation into settler society.
-8. We want dignified housing for all Indigenous peoples.
-9. We want all Indigenous people who have been criminally charged to be exclusively subject to Indigenous—not settler—jurisdiction.
-10. We want good food and clean water for all Indigenous people regardless of circumstance.
-11. We want to dismantle all colonial structures and "cultures."
-12. We want free healthcare and recreation for all.
-13. We want to restore the environment and protect Mother Earth’s ecosystems.
-14. We reject the native comprador class and their liberal ideas of individual self-interest; our movement is a people’s movement.
-15. We stand against all violence towards people based on gender and sexuality.
-16. We uphold and emphasize the importance of women’s struggle in building a revolutionary society on grounds equal to that of men.
+1. We support independence for all Indigenous peoples. We maintain the right of nations to self-determination; to govern themselves without outside countrol. 
+2. True independence means dismantling settler states like the "United States" and "Canada." The Indigenous peoples of the "Americas" must have full control over their land, people, economies, political systems, and relationships with other nations.
+3. Indigenous people who were forced to leave their traditional lands have the right to return home.
+4. All Indigenous people deserve education developed by and for our own communities. This education should honor oral traditions, knowledge passed down from elders, and the preservation and revival of Indigenous languages.
+5. We oppose capitalist exploitation and resource extraction on our ancestral lands. We want to heal the environment and protect Mother Earth's ecosystems.
+6. We want Indigenous communities to be armed.
+7. We recognize that our cultures can grow and change while staying rooted in tradition. We struggle against tendencies like sexism, chauvinism, and individualism.
+8. All Indigenous people deserve safe, dignified housing.
+9. All Indigenous people charged with crimes should be judged only by Indigenous justice systems, not by colonial courts.
+10. All Indigenous people deserve access to healthy food, clean water, free healthcare, and opportunities for recreation.
+11. We reject Indigenous "leaders" who prioritize their own wealth over the wellbeing of their communities. When they serve settler interests instead of their own people, they betray all Indigenous people. Our movement is a movement for the masses.
+12. We oppose all violence targeting people because of their gender, sexuality, or disability.
+13. Women, Two-Spirit people, transgender people, and gender-nonconforming people play essential roles in building a revolutionary society. Their struggles are important and must be centered in our work.
