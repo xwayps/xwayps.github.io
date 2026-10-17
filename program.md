@@ -4,7 +4,7 @@ title: Our Program
 permalink: /program/
 ---
 
-1. We support independence for all Indigenous peoples. We maintain the right of nations to self-determination; to govern themselves without outside countrol. 
+1. We support independence for all Indigenous peoples. We maintain the right of nations to self-determination; to govern themselves without outside control. 
 2. True independence means dismantling settler states like the "United States" and "Canada." The Indigenous peoples of the "Americas" must have full control over their land, people, economies, political systems, and relationships with other nations.
 3. Indigenous people who were forced to leave their traditional lands have the right to return home.
 4. All Indigenous people deserve education developed by and for our own communities. This education should honor oral traditions, knowledge passed down from elders, and the preservation and revival of Indigenous languages.
